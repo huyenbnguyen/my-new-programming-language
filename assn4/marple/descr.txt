@@ -1,0 +1,15 @@
+1. Assignment operator in (with ([x y]]) ...) is done by reference
+2. The implementation of set uses the Store to record changes
+3. Passing a variable to a function is done by value.
+4. The language implements static binding
+5. The language implements lazy evaluation
+6. The language does use Env to get most recent value of the identifier (after taking closure into consideration) by appending the latest binding to the top of the Env
+7. + and * operations pass the updated Store to the left operand
+8. the program does raise an error when there's multiple bindings for an identifier in the same with
+9. set returns the new value being set to the variable
+10. The memory address is incremented when (box n) is called or when there's a new identifier (as in (with ([a 1]) ...). A new box is created every time we try to reference an identifier binded to a box because Marple implements lazy evaluation. That's why setbox will always work with a new box, and the changes won't be reflected in the original box. 
+In contrast, because we have the type numV, set will work for parameters simply because we can directly go from numC to numV and lazy evaluation won't make a difference. 
+
+
+
+

@@ -1,0 +1,11 @@
+1. Assignment operator in (with ([x y]]) ...) is done by reference
+2. The implementation of set uses the Store to record changes
+3. Passing a variable to a function is done by reference.
+4. The language implements static binding
+5. The language implements eager evaluation
+6. The language does use Env to get most recent value of the identifier (after taking closure into consideration) by appending the latest binding to the top of the Env
+7. + and * operations pass the updated Store to the left operand
+8. the program does raise an error when there's multiple bindings for an identifier in the same with
+9. set returns the new value being set to the variable
+10. The memory address is incremented ONLY when there's a new identifier (as in (with ([a 1]) ...). We get the same box every time we try to reference an identifier binded to a box because Sherlock implements eager evaluation. That's why setbox works, and that's why it doesn't need to increment the memory address when there's a reference to the box.
+In the same manner, because we have the type numV, set will work for parameters simply because we can directly go from numC to numV and eager evaluation won't make a difference. 

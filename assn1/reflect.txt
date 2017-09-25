@@ -1,0 +1,3 @@
+I modified the syntax of almost all of my test cases, because I didn't understand how parse, desugar and interp are supposed to work together.
+
+Also, I got rid of test cases that tested the same ideas. I also added test cases 15 to 20 based on the test cases I reviewed and my discussion with classmates about the assignment.
